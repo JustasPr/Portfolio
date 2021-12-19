@@ -272,9 +272,11 @@ main .main__portfolio .main__portfolio-boxes {
 }
 
 main .main__portfolio .main__portfolio-box {
+  text-align: left;
   margin: 30px;
-  max-width: 500px;
+  max-width: 400px;
   max-height: 600px;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -300,7 +302,6 @@ main .main__portfolio .main__portfolio-box .main__portfolio-box-image img {
 
 main .main__portfolio .main__portfolio-box .main__portfolio-box-image .about__project {
   padding: 20px;
-  text-align: left;
   position: absolute;
   top: 0;
 }
@@ -311,7 +312,6 @@ main .main__portfolio .main__portfolio-box .main__portfolio-box-image .about__pr
 }
 
 main .main__portfolio .main__portfolio-box .main__portfolio-box-image .about__project p {
-  text-align: left;
   margin-bottom: 20px;
 }
 
@@ -325,7 +325,6 @@ main .main__portfolio .main__portfolio-box .main__portfolio-box-image .about__pr
 }
 
 main .main__portfolio .main__portfolio-box p {
-  text-align: center;
   color: #fff;
   font-family: "Montserrat", sans-serif;
   padding: 10px 0;
@@ -356,6 +355,18 @@ main .main__portfolio .main__portfolio-box .main__portfolio-show #git a {
 }
 
 /* RESPONSIVE */
+@media only screen and (max-width: 500px) {
+  .about__project {
+    text-align: center;
+  }
+  .about__project p {
+    visibility: hidden;
+  }
+  .about__project span {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   header h2 {
     width: 100%;
@@ -393,7 +404,6 @@ main .main__portfolio .main__portfolio-box .main__portfolio-show #git a {
     margin-top: 20px;
   }
   header nav .show_links {
-    z-index: 1;
     height: 150px;
     -webkit-transition: 0.4s;
     transition: 0.4s;

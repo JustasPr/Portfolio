@@ -192,9 +192,11 @@ main {
             justify-content: center;
         }
         .main__portfolio-box {
+            text-align: left;
             margin: 30px;
-            max-width: 500px;
+            max-width: 400px;
             max-height: 600px;
+            overflow: hidden;
             display: flex;
             flex-direction: column;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
             background: $color-section;
@@ -214,7 +216,7 @@ main {
                         color: #fff;
                     }
                     p {
-                        text-align: left;
+
                         margin-bottom: 20px;
                     }
                     .about__skill {
@@ -226,13 +228,11 @@ main {
                         border-radius: 4px;
                     }
                     padding: 20px;
-                    text-align: left;
                     position: absolute;
                     top: 0;
                 }
             }
             p {
-                text-align: center;
                 color: #fff;
                 font-family: $font-secondary;
                 padding: 10px 0;
@@ -262,6 +262,17 @@ main {
     }
 }
 /* RESPONSIVE */
+@media only screen and (max-width: 500px){ 
+    .about__project {
+        text-align: center;
+        p {
+            visibility: hidden;
+        }
+        span {
+            display: none;
+        }
+    }
+}
 @media only screen and (max-width: 700px){
     header {
         h2 {
@@ -292,7 +303,6 @@ main {
                 margin-top: 20px;
             }
             .show_links {
-                z-index: 1;
                 height: 150px;
                 transition:0.4s;
                 margin-top: 30px;
